@@ -1,0 +1,153 @@
+/*Global==============*/
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100&display=swap');
+
+:root{
+    --font_to_text: 'Poppins','sans-serif','serif';
+    --font_to_title: 'Arial','Havelica','sans-serif' 'serif';
+    --gray_black: rgba(54, 54, 54, 0.938);
+}
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font_to_text);
+    font-weight: 400;
+}
+body{
+    background-color: #d9e0ef;
+}
+/*Global=======================*/
+
+/*personalInformation==========*/
+#personalInformation{
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+#personalInformation img{
+    width: 140px ;
+    margin: 1.2em auto 0 auto;
+    display: block;
+    border-radius: 50%;
+}
+#personalInformation h1{
+    color: var(--gray_black);
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 1em auto 0.5em auto;
+}
+#personalInformation p{
+    color: var(--gray_black);
+}
+#personalInformation #contatos{
+    margin: 0.8em auto 20px auto;
+}
+#personalInformation a{
+    text-decoration: none;
+    color: var(--gray_black);
+    display: inline-block;
+    margin-top: 12px;
+}
+/*p#personalInformation===========*/
+
+/* about_me===================*/
+#about_me{
+    background-color: #fff;
+    padding: 1.3em;
+}
+#about_me h2{
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+}
+#about_me p{
+    line-height: 2.8em;
+    color: var(--gray_black);
+}
+#tell_me p:after,#skills ul li:nth-of-type(7)::after{
+    display: inline-block;
+    content: '';
+    position: relative;
+    width: 98%;
+    height: 2px;
+    background-color: var(--gray_black);
+}
+
+/*skills=======*/
+#skills ul{
+    list-style: none;
+}
+#skills ul li:nth-of-type(1){
+    margin: 0;
+}
+#skills ul li {
+    margin-top: 0.6em;
+    font-size: 1.1em;
+}
+/*skills=====*/
+
+/*courses====*/
+#courses h2{
+    margin-top: 0.8em;
+    margin-bottom: 0.5em;
+}
+/*about_me====================*/
+
+/*socialNetworks===============*/
+footer{
+    background-color: #3b5998;
+}
+#socialNetworks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 25px;
+}
+#socialNetworks a {
+    color: rgba(255, 255, 255, 0.945);
+    height: 200px;
+    font-size: 2em;
+}
+/*socialNetworks===============*/
+
+/*dark_mode====================*/
+label{
+    display: inline-block;
+    width: 73px;
+    height: 28px;
+    background-color: blue;
+    border-radius: 30px;
+    margin-bottom: 2em;
+    padding: 4px;
+    text-align: left;
+
+}
+span{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 100%;
+    transform: scaleX(20px)
+}
+
+@media screen and (min-width:600px){
+    main{
+        display:flex
+    }
+    /* personalInformation============*/
+    #personalInformation{
+        padding: 1em;
+    }
+    /* personalInformation */
+}
+
+@media screen and (min-width:1020px){
+    main{
+        width: 100%;
+        max-width: 900px;
+        margin:  0 auto;
+    }
+}

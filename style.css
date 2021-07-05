@@ -7,6 +7,7 @@
     --font_to_text: 'Poppins','sans-serif','serif';
     --font_to_title: 'Arial','Havelica','sans-serif' 'serif';
     --gray_black: rgba(54, 54, 54, 0.938);
+    --cor_de_fundo: #d9e0ef;
 }
 *{
     border: 0;
@@ -16,7 +17,7 @@
     font-weight: 400;
 }
 body{
-    background-color: #d9e0ef;
+    background-color: var(--cor_de_fundo);
 }
 /*Global=======================*/
 
@@ -73,6 +74,7 @@ body{
     width: 98%;
     height: 2px;
     background-color: var(--gray_black);
+    
 }
 
 /*skills=======*/
@@ -117,7 +119,7 @@ label{
     display: inline-block;
     width: 73px;
     height: 28px;
-    background-color: blue;
+    background-color: #3b5998;
     border-radius: 30px;
     margin-bottom: 2em;
     padding: 4px;
@@ -130,11 +132,52 @@ span{
     height: 28px;
     background-color: #fff;
     border-radius: 100%;
-    transform: scaleX(20px)
+    transition-timing-function: ease-in-out;
+   
+}
+/*input=======*/
+input{
+    display: none;
 }
 
+input:checked ~ main{
+    background-color: #19232f;
+    transition-duration: 0.4s;
+}
+
+
+input:checked ~ main #about_me{
+    background-color: #2d3846;
+    transition-duration: 0.2s;
+}
+
+input:checked ~ main #personalInformation p,input:checked ~ main #personalInformation a,input:checked ~ main #personalInformation h1{
+    color: rgba(255, 255, 255, 0.801);
+}
+
+input:checked ~ main #about_me,input:checked ~ main #about_me p{
+    color:  rgba(255, 255, 255, 0.801);
+}
+input:checked ~ main #about_me h2,
+input:checked ~ main #about_me h3{
+    color: #fff;
+}
+input:checked ~ main span{
+    transition-property: translateX();
+    transform: translateX(40px);
+    transition-duration: 0.6s;
+}
+input:checked ~ main #tell_me p:after,input:checked ~ main #skills ul li:nth-of-type(7)::after{
+    background-color: rgba(255, 255, 255, 0.801);
+}
+input:checked ~ footer{
+    background-color: #131a23;
+}
+
+
+
 @media screen and (min-width:600px){
-    main{
+    #geral{
         display:flex
     }
     /* personalInformation============*/
@@ -145,7 +188,7 @@ span{
 }
 
 @media screen and (min-width:1020px){
-    main{
+    #geral{
         width: 100%;
         max-width: 900px;
         margin:  0 auto;

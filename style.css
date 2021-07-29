@@ -76,6 +76,10 @@ body{
     background-color: var(--gray_black);
     
 }
+#tell_me a{
+    font-size: 1.2em;
+    margin-left: 0.4em
+}
 
 /*skills=======*/
 #skills ul{
@@ -110,7 +114,8 @@ footer{
 #socialNetworks a {
     color: rgba(255, 255, 255, 0.945);
     height: 200px;
-    font-size: 2em;
+    font-size: 2.5em;
+    
 }
 /*socialNetworks===============*/
 
@@ -172,6 +177,10 @@ input:checked ~ main #tell_me p:after,input:checked ~ main #skills ul li:nth-of-
 }
 input:checked ~ footer{
     background-color: #131a23;
+}
+input:checked ~ main  #tell_me a{
+    color: rgb(138, 127, 127);
+    
 }
 
 

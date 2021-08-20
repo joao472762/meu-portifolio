@@ -182,6 +182,11 @@ input:checked ~ main  #tell_me a{
     color: rgb(138, 127, 127);
     
 }
+input:checked ~ main  section a{
+    color: rgb(138, 127, 127);
+    font-size: 1.2em;
+    
+}
 
 
 

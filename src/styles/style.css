@@ -14,7 +14,6 @@
     margin: 0;
     padding: 0;
     font-family: var(--font_to_text);
-    font-weight: 400;
 }
 body{
     background-color: var(--cor_de_fundo);
@@ -27,16 +26,17 @@ body{
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
+    padding-top: 1.2rem;
 }
 #personalInformation img{
-    width: 140px ;
-    margin: 1.2em auto 0 auto;
+    width: 8.75rem ;
+    height: 8.75rem;
+    margin: 0 auto;
     display: block;
     border-radius: 50%;
 }
 #personalInformation h1{
     color: var(--gray_black);
-    font-weight: 600;
     font-size: 1.2em;
     margin: 1em auto 0.5em auto;
 }
@@ -44,13 +44,13 @@ body{
     color: var(--gray_black);
 }
 #personalInformation #contatos{
-    margin: 0.8em auto 20px auto;
+    margin: 0.8em auto 1.25rem auto;
 }
 #personalInformation a{
     text-decoration: none;
     color: var(--gray_black);
     display: inline-block;
-    margin-top: 12px;
+    margin-top: .75rem;
 }
 /*p#personalInformation===========*/
 
@@ -62,6 +62,7 @@ body{
 #about_me h2{
     margin-top: 0.3em;
     margin-bottom: 1em;
+    font-weight: 400;
 }
 #about_me p{
     line-height: 2.8em;
@@ -72,7 +73,7 @@ body{
     content: '';
     position: relative;
     width: 98%;
-    height: 2px;
+    height: 0.125rem;
     background-color: var(--gray_black);
     
 }
@@ -91,10 +92,27 @@ body{
 /*skills=====*/
 
 /*courses====*/
+#courses {
+    color: rgb(24, 24, 24);
+}
 #courses h2{
     margin-top: 0.8em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-weight: 600;
 }
+
+#courses .course{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: .5rem;
+    margin-bottom: 1rem;
+
+}
+#courses .course span{
+    color: #000;
+}
+
 /*about_me====================*/
 
 /*socialNetworks===============*/
@@ -109,7 +127,7 @@ footer{
 }
 #socialNetworks a {
     color: rgba(255, 255, 255, 0.945);
-    height: 200px;
+    height: 12.5rem;
     font-size: 2em;
 }
 /*socialNetworks===============*/
@@ -117,16 +135,16 @@ footer{
 /*dark_mode====================*/
 label{
     display: inline-block;
-    width: 73px;
-    height: 28px;
+    width: 4.562rem;
+    height:  1.875rem;
     background-color: #3b5998;
     border-radius: 30px;
     margin-bottom: 2em;
-    padding: 4px;
+    padding: .25rem;
     text-align: left;
 
 }
-span{
+span#ball{
     display: inline-block;
     width: 28px;
     height: 28px;
@@ -151,7 +169,11 @@ input:checked ~ main #about_me{
     transition-duration: 0.2s;
 }
 
-input:checked ~ main #personalInformation p,input:checked ~ main #personalInformation a,input:checked ~ main #personalInformation h1{
+input:checked ~ main #personalInformation p,
+input:checked ~ main #personalInformation a,
+input:checked ~ main #personalInformation h1,
+input:checked ~ main  #geral #courses .course span,
+input:checked ~ main  #geral #courses .course strong{
     color: rgba(255, 255, 255, 0.801);
 }
 
@@ -159,13 +181,15 @@ input:checked ~ main #about_me,input:checked ~ main #about_me p{
     color:  rgba(255, 255, 255, 0.801);
 }
 input:checked ~ main #about_me h2,
-input:checked ~ main #about_me h3{
+input:checked ~ main #about_me h3
+{
     color: #fff;
 }
-input:checked ~ main span{
+
+input:checked ~ main span#ball{
     transition-property: translateX();
     transform: translateX(40px);
-    transition-duration: 0.6s;
+    transition-duration: 0.4s;
 }
 input:checked ~ main #tell_me p:after,input:checked ~ main #skills ul li:nth-of-type(7)::after{
     background-color: rgba(255, 255, 255, 0.801);
@@ -177,14 +201,14 @@ input:checked ~ footer{
 
 
 @media screen and (min-width:600px){
+   
     #geral{
         display:flex
     }
-    /* personalInformation============*/
     #personalInformation{
         padding: 1em;
     }
-    /* personalInformation */
+   
 }
 
 @media screen and (min-width:1020px){
@@ -194,3 +218,4 @@ input:checked ~ footer{
         margin:  0 auto;
     }
 }
+

@@ -176,6 +176,9 @@ input:checked ~ main  #geral #courses .course span,
 input:checked ~ main  #geral #courses .course strong{
     color: rgba(255, 255, 255, 0.801);
 }
+input:checked ~ main  a{
+    color: rgb(163, 163, 163);
+}
 
 input:checked ~ main #about_me,input:checked ~ main #about_me p{
     color:  rgba(255, 255, 255, 0.801);
